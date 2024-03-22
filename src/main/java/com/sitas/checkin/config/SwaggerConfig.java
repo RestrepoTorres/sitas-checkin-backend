@@ -13,8 +13,8 @@ public class SwaggerConfig {
     public OpenAPI api() {
         return new OpenAPI()
             .info(new Info()
-                .title("Backend checkIn")
+                .title("API Check-In")
                 .version("1.0.0")
-                .description("Endpoints for the backend of CheckIn of the SITAS project"));
+                .description("API of Check-In of the SITAS project"));
     }
 }

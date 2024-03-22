@@ -1,12 +1,12 @@
-package com.sitas.checkin.Entity;
+package com.sitas.checkin.domain.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+@Entity
 @Data
 @NoArgsConstructor
-@Entity
 @Table (name = "LUGGAGE_INFO")
 public class LuggageInfoEntity {
     @Id
