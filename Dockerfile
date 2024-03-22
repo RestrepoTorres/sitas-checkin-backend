@@ -25,14 +25,8 @@ WORKDIR /app
 # Copy the JAR file built in the previous stage
 COPY --from=build /app/target/checkin-0.0.1-SNAPSHOT.jar .
 
-# Copy the wait-for-oracle script
-COPY wait-for-oracle.sh .
-
-# Make the script executable
-RUN chmod +x wait-for-oracle.sh
-
 # Expose the port your application runs on
 EXPOSE 8080
 
-# Command to run the application
-CMD ["./wait-for-oracle.sh", "java", "-jar", "checkin-0.0.1-SNAPSHOT.jar"]
+# Delay the start of the application by 60 seconds
+CMD ["sh", "-c", "sleep 50 && java -jar checkin-0.0.1-SNAPSHOT.jar"]
