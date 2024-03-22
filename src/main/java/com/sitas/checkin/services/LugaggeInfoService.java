@@ -1,6 +1,6 @@
-package com.sitas.checkin.Service;
-import com.sitas.checkin.Entity.LuggageInfoEntity;
-import com.sitas.checkin.Repository.ILuggageInfoRepository;
+package com.sitas.checkin.services;
+import com.sitas.checkin.domain.entity.LuggageInfoEntity;
+import com.sitas.checkin.repository.ILuggageInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service
