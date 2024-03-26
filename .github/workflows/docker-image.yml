@@ -21,4 +21,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tag: ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
+          tags: ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
