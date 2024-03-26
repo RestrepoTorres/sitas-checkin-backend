@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master","develop" ]
+  pull_request:
+    branches: [ "master", "develop" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    - name: docker login
+    - uses: docker/login-action@v2
+      with:
+        username: ${{secrets.DOCKERUSERNAME}}
+        password: ${{secrets.DOCKER}}
+    
+    - name: build docker image
+    - uses: docker/build-push-action@v4 
+      with: 
+        context: .
+        file: ./Dockerfile
+        push: true
+        tag: ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
+        
