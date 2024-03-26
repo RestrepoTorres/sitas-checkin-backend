@@ -16,7 +16,7 @@ jobs:
       - name: docker login
         uses: docker/login-action@v2
         with:
-          username: restrepotorres
+          username: ${{secrets.DOCKERUSERNAME}}
           password: ${{secrets.DOCKER}}
 
       - name: build docker compose
