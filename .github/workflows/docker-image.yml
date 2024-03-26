@@ -15,9 +15,12 @@ jobs:
         with:
           username: ${{secrets.DOCKERUSERNAME}}
           password: ${{secrets.DOCKER}}
+
+      - name: selena quintanilla
+        run: ls 
       - name: docker2
         run: |
-          docker build -t oracle . --file ./dockerfile
+          docker build -t oracle . --file ./Dockerfile
           docker tag oracle ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
           docker push ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
           
