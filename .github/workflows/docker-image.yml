@@ -17,7 +17,7 @@ jobs:
           password: ${{secrets.DOCKER}}
 
       - name: selena quintanilla
-        run: ls 
+        run: ls -a
       - name: docker2
         run: |
           docker build -t oracle . -f ./Dockerfile
