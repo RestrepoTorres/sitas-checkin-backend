@@ -44,7 +44,10 @@ Also using a Dockerfile for the Spring-Boot app with Maven.
     - SID: free (or the name of your pluggable database)
     - Username: system or sys
     - Password: password (or the password you specified in the environment variables)
+    
+6. Once the application is running, you can access the Swagger UI at
 
+   - [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 ## Customization
 
 You can customize the Oracle database configuration by modifying the `compose.yaml` file:
