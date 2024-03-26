@@ -25,5 +25,8 @@ jobs:
           compose-file: "./compose.yaml"
 
       - name: push dockerin
-        run:
+        run: |
           docker-compose push
+          docker tag gvenzl/oracle-free:latest ${{secrets.DOCKERUSERNAME}}/oracle:version1
+          docker push ${{secrets.DOCKERUSERNAME}}/oracle:version1.0.2
+          
