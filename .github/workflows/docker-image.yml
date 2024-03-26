@@ -25,5 +25,5 @@ jobs:
           compose-file: "./compose.yaml"
 
       - name: push dockerin
-        run: 
+        run:
           docker-compose push
