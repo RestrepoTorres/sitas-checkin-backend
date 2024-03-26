@@ -24,8 +24,6 @@ jobs:
         with:
           compose-file: "./compose.yaml"
 
-      - name: push from docker compose
-        uses: pennsignals/publish_docker-compose@v0.1.0
-        with:
-          docker_compose: 'compose.yaml' # required
-          repo_token: ${{ secrets.DOCKER }}
+      - name: push dockerin
+        run: 
+          docker-compose push
