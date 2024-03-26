@@ -22,7 +22,7 @@ jobs:
       - name: build docker compose
         uses: hoverkraft-tech/compose-action@v1.5.1
         with:
-          compose-file: "./compose.yml"
+          compose-file: "./compose.yaml"
 
       - name: push from docker compose
         uses: pennsignals/publish_docker-compose@v0.1.0
