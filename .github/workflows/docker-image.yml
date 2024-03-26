@@ -19,20 +19,8 @@ jobs:
           username: ${{secrets.DOCKERUSERNAME}}
           password: ${{secrets.DOCKER}}
 
-      - name: selena quintanilla
-        run: ls -la
-      - name: docker2
-        run: |
-          docker build -t oracle . -f ./Dockerfile
-          docker tag oracle ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
-          docker push ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
-          
+      - name: docker compositador
+        uses: hoverkraft-tech/compose-action@v1.5.1
+        with:
+          compose-file: "./compose.yml"
       
-      #- name: build docker image
-        #uses: docker/build-push-action@v4 
-        #with: 
-          #context: .
-          #file: ./Dockerfile
-          #push: true
-         # tags: ${{secrets.DOCKERUSERNAME}}/oracle:version0.0.0
-          
