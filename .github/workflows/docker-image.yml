@@ -29,4 +29,6 @@ jobs:
           docker-compose push
           docker tag gvenzl/oracle-free:latest ${{secrets.DOCKERUSERNAME}}/oracle:version1.0.2
           docker push ${{secrets.DOCKERUSERNAME}}/oracle:version1.0.2
+          mvnw spring-boot:run
+          mvnw clean install
           
