@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "ramamaster","ramadevelop" ]
+    branches: [ "master","ramadevelop" ]
   pull_request:
-    branches: [ "ramamaster", "ramadevelop" ]
+    branches: [ "master", "ramadevelop" ]
 
 jobs:
   build:
